@@ -43,21 +43,32 @@
 // updateSlidePosition();
 // }
 
-// const img = document.getElementsByTagName("img");
-// for(item of img) {
-//     item.addEventListener("mouseover", function(){
-//         document.getElementById("carousel-actions-prev").style.display = "block";
-//         document.getElementById("carousel-actions-next").style.display = "block";
-//     });
-//     item.addEventListener("mouseout", function(){
-//         document.getElementById("carousel-actions-prev").style.display = "none";
-//         document.getElementById("carousel-actions-next").style.display = "none";
-//     });
-// }
-// document.getElementById("carousel-actions-prev").addEventListener("mouseover", function(){})
+
+//  prev/next button hovering
+const img = document.getElementsByTagName("img");
+for(item of img) {
+    item.addEventListener("mouseover", function(){
+        document.getElementById("carousel-actions-prev").style.display = "block";
+        document.getElementById("carousel-actions-next").style.display = "block";
+    });
+    item.addEventListener("mouseout", function(){
+        document.getElementById("carousel-actions-prev").style.display = "none";
+        document.getElementById("carousel-actions-next").style.display = "none";
+    });
+}
+document.getElementById("carousel-actions-prev").addEventListener("mouseover", function(){
+    document.getElementById("carousel-actions-prev").style.display = "block";
+    document.getElementById("carousel-actions-next").style.display = "block";
+})
+document.getElementById("carousel-actions-next").addEventListener("mouseover", function(){
+    document.getElementById("carousel-actions-prev").style.display = "block";
+    document.getElementById("carousel-actions-next").style.display = "block";
+})
 
 
 
+
+// slides control
 let slideIndex = 1;
 showSlides(slideIndex);
 
